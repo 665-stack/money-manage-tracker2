@@ -31,4 +31,17 @@ function expensesCalc() {
         totalExpenses.innerText = expenses;
         totalBalance.innerText = UpdateBalanceTotal;
     }
-})
+});
+// save button
+document.getElementById('save-btn').addEventListener('click', function () {
+    const saveInput = getInputValue('save-input');
+    const income2 = getInputValue('income-input');
+    const expenses = expensesCalc();
+    const updateBlcTotal = income2 - expenses;
+    // save amount
+    const saveMoneyCalc = (income2 / 100) * saveInput;
+    const savingAmount = document.getElementById('save-amount');
+    // remainnig balance
+    const remainnigMoneyCalc = updateBlcTotal - saveMoneyCalc;
+    const remainnigBalance = document.getElementById('remainnig-balance');
+});
