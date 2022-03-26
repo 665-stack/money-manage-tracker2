@@ -10,4 +10,12 @@ function expensesCalc() {
     const clothsInput = getInputValue('cloths-input');
     const expensesSum = foodInput + rentInput + clothsInput;
     return expensesSum;
-}
+} document.getElementById('calc-btn').addEventListener('click', function () {
+    const income = getInputValue('income-input');
+    const expenses = expensesCalc();
+    //update total expenses
+    const totalExpenses = document.getElementById('total-expenses');
+    //update balance
+    const UpdateBalanceTotal = income - expenses;
+    const totalBalance = document.getElementById('total-balance');
+})
