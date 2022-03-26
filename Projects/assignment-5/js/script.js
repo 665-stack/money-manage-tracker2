@@ -18,4 +18,17 @@ function expensesCalc() {
     //update balance
     const UpdateBalanceTotal = income - expenses;
     const totalBalance = document.getElementById('total-balance');
+    if (income <= 0) {
+        alert('Please enter valid number')
+    }
+    else if (expenses <= 0) {
+        alert('Please enter a valid number')
+    }
+    else if (income < expenses) {
+        alert("You can't spend more than your Income")
+    }
+    else {
+        totalExpenses.innerText = expenses;
+        totalBalance.innerText = UpdateBalanceTotal;
+    }
 })
