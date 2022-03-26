@@ -44,4 +44,12 @@ document.getElementById('save-btn').addEventListener('click', function () {
     // remainnig balance
     const remainnigMoneyCalc = updateBlcTotal - saveMoneyCalc;
     const remainnigBalance = document.getElementById('remainnig-balance');
+    //saving related errors 
+    if (saveMoneyCalc > updateBlcTotal) {
+        alert("You can't save more than your current balance")
+    }
+    else {
+        savingAmount.innerText = saveMoneyCalc;
+        remainnigBalance.innerText = remainnigMoneyCalc;
+    }
 });
