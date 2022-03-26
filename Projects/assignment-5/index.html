@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Manager</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon/favpng_money-logo.png">
+    <!-- external css -->
+    <link rel="stylesheet" href="style/style.css">
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+    <!-- header start -->
+    <header>
+        <h1 class="text-4xl font-bold text-center mt-4 mb-10">Money Manage <span
+                class="font-extrabold text-blue-600">Tracker</span></h1>
+    </header>
+    <!-- main start -->
+    <main class="grid md:grid-cols-2 lg:grid-cols-2">
+        <!-- img section -->
+        <section class="m-16" id="side-image">
+            <img src="images/moneyBank.png" alt="">
+        </section>
+        <!-- calculation section -->
+        <section class=" text-center bg-slate-100 pt-12 pb-12 m-8 mb-30 rounded">
+            <!-- income and expenses section -->
+            <h3 class=" text-center text-xl font-bold pb-5">Income</h3>
+            <p class="font-medium">Income: <input id="income-input" class="bg-gray-300 ml-2 py-1 px-4 rounded-sm"
+                    type="number"></p>
+            <h3 class="text-xl font-bold pt-4 pb-5">Expenses</h3>
+            <p class="font-medium">Food: <input id="food-input" class="bg-gray-300 ml-2 py-1 px-4 rounded-sm"
+                    type="number"></p>
+            <br><br>
+            <p class="font-medium">Rent: <input id="rent-input" class="bg-gray-300 ml-2 py-1 px-4 rounded-sm"
+                    type="number"></p>
+            <br><br>
+            <p class="font-medium">Cloths: <input id='cloths-input' class="bg-gray-300 ml-2 py-1 px-4 rounded-sm"
+                    type="number"> </p>
+            <br><br>
+
+            <!-- calc button -->
+            <button id="calc-btn"
+                class="calc-btn bg-blue-600 py-2 px-8 mb-5 text-white font-medium rounded">Calculate</button>
+            <h3 class=" text-center text-xl font-bold pb-5">Total Expenses : <span id="total-expenses">00</span></h3>
+            <h3 class=" text-center text-xl font-bold pb-5">Balance: <span id="total-balance">00</span></h3>
+            <!-- save and remaining section -->
+            <span class="font-medium">Save: <input id="save-input" type="text"
+                    class="save-input bg-gray-300 ml-2 py-2     px-3 rounded-sm w-24		"></span>
+            <span class="px-3 font-bold">%</span>
+            <!-- save button -->
+            <button id="save-btn"
+                class="save-btn bg-blue-600 py-2 px-8 mt-3 rounded text-white font-medium">Save</button>
+            <h3 class="text-center text-xl font-bold pt-5 pb-3">Saving Amount: <span id="save-amount">00</span></h3>
+            <h3 class="text-center text-xl font-bold pb-5">Remainnig Balance: <span id="remainnig-balance">00</span>
+            </h3>
+        </section>
+    </main>
+
+    <!-- external JS -->
+    <script src="js/script.js"></script>
+</body>
+
+
+</html>
